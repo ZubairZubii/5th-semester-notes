@@ -1,0 +1,71 @@
+Places (P_L):
+P(C->B)
+P(C->D)
+P(Z->A)
+P(A->C)
+P(Z->E)
+iL
+P(B->D)
+oL
+P(Y->B)
+P(Y->A)
+P(C->Y)
+P(A->D)
+P(B->E)
+P(C->E)
+P(A->B)
+P(D->Z)
+P(B->C)
+P(D->E)
+
+Transitions (T_L):
+Z
+A
+E
+Y
+B
+D
+C
+
+Flow (F_L):
+P(A->B) -> B
+C -> P(C->E)
+Y -> P(Y->B)
+D -> P(D->E)
+P(Y->B) -> B
+P(B->E) -> E
+P(C->D) -> D
+C -> P(C->Y)
+Z -> P(Z->A)
+P(B->C) -> C
+P(C->B) -> B
+D -> P(D->Z)
+C -> P(C->D)
+E -> oL
+A -> P(A->B)
+P(Z->A) -> A
+P(D->E) -> E
+Z -> oL
+Y -> P(Y->A)
+B -> oL
+B -> P(B->C)
+A -> P(A->C)
+P(Y->A) -> A
+P(Z->E) -> E
+C -> P(C->B)
+A -> P(A->D)
+P(A->C) -> C
+P(D->Z) -> Z
+D -> oL
+iL -> B
+iL -> Y
+P(C->Y) -> Y
+B -> P(B->D)
+P(A->D) -> D
+iL -> A
+Z -> P(Z->E)
+P(B->D) -> D
+iL -> Z
+B -> P(B->E)
+iL -> C
+P(C->E) -> E
