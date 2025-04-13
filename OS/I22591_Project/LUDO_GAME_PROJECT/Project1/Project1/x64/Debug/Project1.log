@@ -1,0 +1,6 @@
+﻿  board.cpp
+  dice.cpp
+C:\Users\Zubair\Documents\NewLaptop\5th_semester\OS\I22591_Project\LUDO_GAME_PROJECT\Project1\Project1\dice.cpp(18,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  main.cpp
+  Generating Code...
+  Project1.vcxproj -> C:\Users\Zubair\Documents\NewLaptop\5th_semester\OS\I22591_Project\LUDO_GAME_PROJECT\Project1\x64\Debug\Project1.exe
