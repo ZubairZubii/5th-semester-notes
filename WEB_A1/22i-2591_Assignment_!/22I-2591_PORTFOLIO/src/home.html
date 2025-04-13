@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Inspired by Kawsar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: #f5f5f5;
+    }
+
+    /* Hero Section Animation */
+    .fade-in {
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+      /* Set a minimum width for collaboration boxes */
+  .collaboration-box {
+    min-height: 250px; /* Adjust this value as needed */
+  }
+
+  /* Set a minimum width for collaboration boxes */
+  .collaboration-box {
+    min-height: 250px; /* Adjust this value as needed */
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+
+
+    .nav-link { padding: 0.5rem 1rem; font-size: 0.875rem; }
+    .brand-icons {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center; /* Center items horizontally */
+    }
+    .brand-icon {
+        margin-bottom: 1rem; /* Adjust spacing between icons */
+        width: 40px; /* Adjust size */
+        height: 40px; /* Adjust size */
+    }
+    .gallery-item img {
+        height: 150px;
+    }
+    .navbar-menu { display: block; }
+    .navbar-links { display: none; }
+    .navbar-menu.open + .navbar-links { display: block; }
+
+    .collaboration-box {
+      padding: 4px; /* Less padding on mobile */
+    }
+
+    .text-4xl {
+      font-size: 2.5rem; /* Adjust text size */
+    }
+
+    .text-3xl {
+      font-size: 1.875rem; /* Adjust text size */
+    }
+
+    .text-6xl {
+      font-size: 3rem; /* Adjust text size */
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+
+
+    .brand-icon {
+      width: 50px; /* Medium width */
+      height: 50px; /* Medium height */
+    }
+
+    .brand-icon i {
+      font-size: 3rem; /* Medium icon size */
+    }
+
+    .collaboration-box {
+      padding: 6px; /* Medium padding */
+    }
+
+    .text-4xl {
+      font-size: 3rem; /* Adjust text size */
+    }
+
+    .text-3xl {
+      font-size: 2.25rem; /* Adjust text size */
+    }
+
+    .text-6xl {
+      font-size: 4rem; /* Adjust text size */
+    }
+  }
+
+  @media (min-width: 1025px) {
+
+
+    .brand-icon {
+      width: 60px; /* Larger width */
+      height: 60px; /* Larger height */
+    }
+
+    .brand-icon i {
+      font-size: 4rem; /* Larger icon size */
+    }
+
+    .collaboration-box {
+      padding: 8px; /* More padding on larger screens */
+    }
+
+    .text-4xl {
+      font-size: 4rem; /* Larger text size */
+    }
+
+    .text-3xl {
+      font-size: 2.5rem; /* Larger text size */
+    }
+
+    .text-6xl {
+      font-size: 5rem; /* Larger text size */
+    }
+  }
+
+
+            
+    .linkedin { background-color: #0077b5; }
+    .github { background-color: #333; }
+    .twitter { background-color: #1da1f2; }
+    .email { background-color: #c71610; }
+
+    
+    .brand-icon.apple { background-color: #000000; } /* Example background color for Apple */
+.brand-icon.google { background-color: #4285F4; } /* Example background color for Google */
+.brand-icon.amazon { background-color: #FF9900; } /* Example background color for Amazon */
+
+
+
+    .slideshow {
+      overflow: hidden;
+      width: 80%; /* Adjust width to make the slider narrower */
+      max-width: 800px; /* Maximum width to prevent stretching */
+      position: relative;
+      margin: 0 auto; /* Center align */
+      padding: 0 20px; /* Padding to add margin on the left and right */
+    }
+
+    .slideshow-track {
+      display: flex;
+      width: 600%; /* Adjust width based on the number of images */
+      animation: slide 20s infinite linear; /* Adjust speed for smooth sliding */
+    }
+
+
+    .slideshow-slide {
+      width: 16.666%; /* Ensure each slide takes up equal space */
+      flex-shrink: 0;
+    }
+
+    .slideshow-slide img {
+      width: 100%; /* Make images fill their container */
+      height: 200px; /* Set a fixed height for all images */
+      object-fit: cover; /* Ensure images scale correctly */
+      display: block;
+      border-radius: 8px; /* Optional: Rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add some depth with shadow */
+    }
+
+    .slideshow:hover .slideshow-track {
+        animation-play-state: paused; /* Pause animation on hover */
+
+      }
+
+    .hover-glow:hover {
+      box-shadow: 0 0 15px 5px rgba(75, 85, 99, 0.6);
+    }
+
+    .icon-glow:hover {
+      filter: brightness(1.4);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2d2d2d;
+      padding: 20px;
+    }
+
+    .social-icons img {
+      width: 24px;
+      height: 24px;
+      margin: 0 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.2);
+    }
+
+    .brand-icons {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem; /* Adjust spacing between icons */
+      }
+    
+      .brand-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px; /* Increase width */
+        height: 60px; /* Increase height */
+        border-radius: 50%; /* Optional: Make icons circular */
+        background-color: rgba(255, 255, 255, 0.1); /* Optional: Add background */
+        transition: background-color 0.3s, transform 0.3s;
+      }
+    
+      .brand-icon:hover {
+        background-color: rgba(255, 255, 255, 0.2); /* Change background on hover */
+        transform: scale(1.1); /* Slightly increase size on hover */
+      }
+    
+      .brand-icon i {
+        font-size: 4rem; /* Adjust icon size */
+      }
+
+
+    .footer-content {
+      text-align: center;
+    }
+
+    .social-icons i:hover {
+        color: #6366F1; /* Tailwind 'yellow-400' */
+        transform: scale(1.2);
+    }
+
+    
+    .linkedin { background-color: #0077b5; }
+    .github { background-color: #333; }
+    .twitter { background-color: #1da1f2; }
+    .email { background-color: #c71610; }
+
+  </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+  <!-- Navigation Bar with Flashing Effects -->
+  <nav class="fixed w-full top-0 left-0 z-50 bg-gradient-to-r from-indigo-800 to-purple-700 py-4 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+    <div class="container mx-auto flex justify-between items-center px-6">
+      <div class="text-lg font-extrabold">
+        <a href="home.html" class="text-white text-3xl hover:animate-pulse">🔥 My Portfolio</a>
+      </div>
+      <div class="hidden md:flex space-x-6">
+        <a href="profile.html" class="hover:text-gray-400 transition-transform transform hover:scale-110">Profile</a>
+        <a href="gallery.html" class="hover:text-gray-400 transition-transform transform hover:scale-110">Gallery</a>
+        <a href="career_goal.html" class="hover:text-gray-400 transition-transform transform hover:scale-110">Career Goals</a>
+        <a href="projects.html" class="hover:text-gray-400 transition-transform transform hover:scale-110">Projects</a>
+        <a href="skills_interest.html" class="hover:text-gray-400 transition-transform transform hover:scale-110">Skills</a>
+        <a href="contact.html" class="hover:text-gray-400 transition-transform transform hover:scale-110">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Effects -->
+  <section class="relative h-screen flex flex-col justify-center items-center bg-cover bg-center fade-in" style="background-image: url('your-background-image.jpg');">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black opacity-60"></div>
+  
+    <!-- Content with Glow Hover Effect -->
+    <div class="relative text-center transform transition-transform duration-500 hover:scale-105">
+      <img src="profile.jpg" alt="Profile Image" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white hover-glow">
+      <h1 class="text-6xl sm:text-7xl font-extrabold mb-2 animate-pulse">Hi, I'm Zubair 👋</h1>
+      <p class="text-3xl sm:text-4xl mb-4">Building digital <span class="text-indigo-500">products</span>, <span class="text-indigo-500">brands</span>, and <span class="text-indigo-500">experiences</span>.</p>
+      <button class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-md mt-4 hover-glow">Latest Shots</button>
+    </div>
+  </section>
+
+  <!-- Sliding Image Gallery -->
+  <section class="slideshow bg-gray-800 py-16">
+    <div class="relative overflow-hidden">
+      <div class="slideshow-track flex animate-slide">
+        <div class="slideshow-slide">
+          <img src="ui.jpg" alt="Image 1" class="object-cover mx-auto">
+        </div>
+        <div class="slideshow-slide">
+          <img src="branding.png" alt="Image 2" class="object-cover mx-auto">
+        </div>
+        <div class="slideshow-slide">
+          <img src="ai.jpg" alt="Image 3" class="object-cover mx-auto">
+        </div>
+        <div class="slideshow-slide">
+          <img src="illustration.avif" alt="Image 4" class="object-cover mx-auto">
+        </div>
+        <div class="slideshow-slide">
+          <img src="mobile.jpg" alt="Image 5" class="object-cover mx-auto">
+        </div>
+        <div class="slideshow-slide">
+          <img src="web_design.jpg" alt="Image 6" class="object-cover mx-auto">
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Collaboration Section with Hover Effects -->
+<section class="py-16 bg-gradient-to-r from-gray-800 to-gray-900">
+    <div class="container mx-auto text-center collaboration">
+      <h2 class="text-4xl font-bold mb-6">Collaborate with brands and agencies to create impactful results</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-left py-6">
+        <div class="collaboration-box p-6 bg-gray-900 rounded-lg hover-glow">
+          <h3 class="text-xl font-bold mb-2">UX & UI</h3>
+          <p>Designing interfaces that are intuitive, efficient, and enjoyable to use.</p>
+        </div>
+        <div class="collaboration-box p-6 bg-gray-900 rounded-lg hover-glow">
+          <h3 class="text-xl font-bold mb-2">Web & Mobile App</h3>
+          <p>Transforming ideas into exceptional web and mobile experiences.</p>
+        </div>
+        <div class="collaboration-box p-6 bg-gray-900 rounded-lg hover-glow">
+          <h3 class="text-xl font-bold mb-2">Design & Creative</h3>
+          <p>Crafting visually stunning designs that connect with your audience.</p>
+        </div>
+        <div class="collaboration-box p-6 bg-gray-900 rounded-lg hover-glow">
+          <h3 class="text-xl font-bold mb-2">Development</h3>
+          <p>Bringing your vision to life with the latest technology and design trends.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section with Call-to-Action -->
+  <section class="py-16 bg-gray-700">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-6">Tell me about your next project</h2>
+      <p class="text-xl mb-6">I'm always excited to take on new challenges. If you have a project in mind, let's connect!</p>
+      <a href="#contact" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-md transition-transform transform hover:scale-105">Get In Touch</a>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 py-6">
+    <div class="container mx-auto text-center">
+        <!-- Brand Icons -->
+        <div class="brand-icons flex justify-center mb-4 py-4">
+            <a href="#" class="brand-icon apple" aria-label="Apple">
+                <i class="fab fa-apple text-white"></i>
+            </a>
+            <a href="#" class="brand-icon google" aria-label="Google">
+                <i class="fab fa-google text-white"></i>
+            </a>
+            <a href="#" class="brand-icon amazon" aria-label="Amazon">
+                <i class="fab fa-amazon text-white"></i>
+            </a>
+            
+        </div>
+        <!-- Footer Links -->
+        <div class="mb-4">
+            <a href="#about" class="text-white hover:text-gray-400 mx-2">About</a>
+            <a href="#services" class="text-white hover:text-gray-400 mx-2">Services</a>
+            <a href="#contact" class="text-white hover:text-gray-400 mx-2">Contact</a>
+        </div>
+        <!-- Footer Icons -->
+        <div class="footer-icons flex justify-center space-x-6">
+            <a href="https://www.facebook.com/your-profile" target="_blank" class="inline-block mx-2 facebook" aria-label="Facebook">
+                <i class="fab fa-facebook-f text-white text-2xl"></i>
+            </a>
+            <a href="https://www.twitter.com/your-profile" target="_blank" class="inline-block mx-2 twitter" aria-label="Twitter">
+                <i class="fab fa-twitter text-white text-2xl"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="inline-block mx-2 linkedin" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in text-white text-2xl"></i>
+            </a>
+            <a href="https://www.instagram.com/your-profile" target="_blank" class="inline-block mx-2 email" aria-label="Instagram">
+                <i class="fab fa-instagram text-white text-2xl"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+  
+
+</body>
+
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zubair's Portfolio - Projects</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom Animations */
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hover Effect */
+        .hover-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 20px rgba(99, 102, 241, 0.2);
+        }
+
+        .brand-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .brand-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .brand-icon:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .brand-icon i {
+            font-size: 4rem;
+        }
+
+              
+        .linkedin { background-color: #0077b5; }
+        .github { background-color: #333; }
+        .twitter { background-color: #1da1f2; }
+        .email { background-color: #c71610; }
+
+        
+        .brand-icon.apple { background-color: #000000; } /* Example background color for Apple */
+.brand-icon.google { background-color: #4285F4; } /* Example background color for Google */
+.brand-icon.amazon { background-color: #FF9900; } /* Example background color for Amazon */
+
+
+
+
+        /* Responsive Adjustments */
+    
+ 
+        @media (max-width: 640px) {
+            .text-4xl { font-size: 1.75rem; }
+            .text-2xl { font-size: 1.25rem; }
+            .text-lg { font-size: 1rem; }
+            .nav-link { padding: 0.5rem 1rem; font-size: 0.875rem; }
+            .grid-cols-3 {
+                grid-template-columns: 1fr;
+            }
+            .brand-icons {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center; /* Center items horizontally */
+            }
+            .brand-icon {
+                margin-bottom: 1rem; /* Adjust spacing between icons */
+                width: 40px; /* Adjust size */
+                height: 40px; /* Adjust size */
+            }
+         
+            .navbar-menu { display: block; }
+            .navbar-links { display: none; }
+            .navbar-menu.open + .navbar-links { display: block; }
+        }
+        
+                @media (min-width: 641px) and (max-width: 1024px) {
+                    .text-4xl { font-size: 2.25rem; }
+                    .text-2xl { font-size: 1.75rem; }
+                    .text-lg { font-size: 1.125rem; }
+                    .grid-cols-3 {
+                        grid-template-columns: 1fr 1fr;
+                    }
+                    .nav-link { padding: 0.75rem 1.5rem; font-size: 1rem; }
+                    .brand-icons { gap: 1rem; }
+               
+                }
+                
+
+        @media (min-width: 1025px) {
+            .grid-cols-3 {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-gray-100 font-sans">
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full top-0 left-0 z-50 bg-gradient-to-r from-indigo-800 to-purple-700 py-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <div class="text-lg font-extrabold">
+                <a href="home.html" class="text-white text-3xl">🔥 My Portfolio</a>
+            </div>
+            <div class="md:hidden flex items-center">
+                <button class="navbar-menu text-white" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+      <div class="hidden md:flex space-x-6">
+        <a href="profile.html" class="hover:text-gray-400 transition-transform transform hover:scale-110">Profile</a>
+        <a href="gallery.html" class="hover:text-gray-400 transition-transform transform hover:scale-110">Gallery</a>
+        <a href="career_goal.html" class="hover:text-gray-400 transition-transform transform hover:scale-110">Career Goals</a>
+        <a href="projects.html" class="hover:text-gray-400 transition-transform transform hover:scale-110">Projects</a>
+        <a href="skills_interest.html" class="hover:text-gray-400 transition-transform transform hover:scale-110">Skills</a>
+        <a href="contact.html" class="hover:text-gray-400 transition-transform transform hover:scale-110">Contact Us</a>
+      </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto py-24 px-6 my-16">
+        <!-- Projects Section -->
+        <section id="projects" class="fade-in my-12">
+            <h2 class="text-4xl font-bold mb-6 text-center">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-card transition-transform duration-300">
+                    <img src="weather.jpg" alt="Project Screenshot" class="rounded-lg mb-4">
+                    <h3 class="text-2xl font-bold mb-2">Project 1: Weather App</h3>
+                    <p class="mb-4">A simple weather application that displays real-time weather information based on the user's location.</p>
+                    <p class="mb-4"><strong>Technologies Used:</strong> HTML, CSS, JavaScript, OpenWeather API</p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com" target="_blank" class="text-indigo-400 hover:text-indigo-200">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://demo.com" target="_blank" class="text-green-400 hover:text-green-200">
+                            <i class="fas fa-link"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-card transition-transform duration-300">
+                    <img src="task_maanger.jpg" alt="Project Screenshot" class="rounded-lg mb-4">
+                    <h3 class="text-2xl font-bold mb-2">Project 2: Task Manager</h3>
+                    <p class="mb-4">A task management app that allows users to add, delete, and update tasks, with a simple user interface.</p>
+                    <p class="mb-4"><strong>Technologies Used:</strong> React, Node.js, MongoDB</p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com" target="_blank" class="text-indigo-400 hover:text-indigo-200">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://demo.com" target="_blank" class="text-green-400 hover:text-green-200">
+                            <i class="fas fa-link"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-card transition-transform duration-300">
+                    <img src="eccomerce.png" alt="Project Screenshot" class="rounded-lg mb-4">
+                    <h3 class="text-2xl font-bold mb-2">Project 3: E-commerce Platform</h3>
+                    <p class="mb-4">An e-commerce platform that supports user registration, product browsing, and secure online payments.</p>
+                    <p class="mb-4"><strong>Technologies Used:</strong> Django, Stripe API, Bootstrap</p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com" target="_blank" class="text-indigo-400 hover:text-indigo-200">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://demo.com" target="_blank" class="text-green-400 hover:text-green-200">
+                            <i class="fas fa-link"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-card transition-transform duration-300">
+                    <img src="blog.png" alt="Project Screenshot" class="rounded-lg mb-4">
+                    <h3 class="text-2xl font-bold mb-2">Project 4: Blog Platform</h3>
+                    <p class="mb-4">A blog platform that allows users to create, edit, and delete posts, with commenting and likes functionality.</p>
+                    <p class="mb-4"><strong>Technologies Used:</strong> Laravel, MySQL, Bootstrap</p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com" target="_blank" class="text-indigo-400 hover:text-indigo-200">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://demo.com" target="_blank" class="text-green-400 hover:text-green-200">
+                            <i class="fas fa-link"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-card transition-transform duration-300">
+                    <img src="portfolio.jpg" alt="Project Screenshot" class="rounded-lg mb-4">
+                    <h3 class="text-2xl font-bold mb-2">Project 5: Portfolio Website</h3>
+                    <p class="mb-4">A personal portfolio website showcasing skills, experience, and projects with a modern design.</p>
+                    <p class="mb-4"><strong>Technologies Used:</strong> HTML, CSS, JavaScript, Tailwind CSS</p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com" target="_blank" class="text-indigo-400 hover:text-indigo-200">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://demo.com" target="_blank" class="text-green-400 hover:text-green-200">
+                            <i class="fas fa-link"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 6 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-card transition-transform duration-300">
+                    <img src="chatbot.png" alt="Project Screenshot" class="rounded-lg mb-4">
+                    <h3 class="text-2xl font-bold mb-2">Project 6: Chatbot</h3>
+                    <p class="mb-4">An AI-powered chatbot that helps users by answering questions and providing recommendations.</p>
+                    <p class="mb-4"><strong>Technologies Used:</strong> Python, TensorFlow, Flask</p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com" target="_blank" class="text-indigo-400 hover:text-indigo-200">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://demo.com" target="_blank" class="text-green-400 hover:text-green-200">
+                            <i class="fas fa-link"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="bg-gray-800 py-6">
+        <div class="container mx-auto text-center">
+            <!-- Brand Icons -->
+            <div class="brand-icons flex justify-center mb-4 py-4">
+                <a href="#" class="brand-icon apple" aria-label="Apple">
+                    <i class="fab fa-apple text-white"></i>
+                </a>
+                <a href="#" class="brand-icon google" aria-label="Google">
+                    <i class="fab fa-google text-white"></i>
+                </a>
+                <a href="#" class="brand-icon amazon" aria-label="Amazon">
+                    <i class="fab fa-amazon text-white"></i>
+                </a>
+                
+            </div>
+            <!-- Footer Links -->
+            <div class="mb-4">
+                <a href="#about" class="text-white hover:text-gray-400 mx-2">About</a>
+                <a href="#services" class="text-white hover:text-gray-400 mx-2">Services</a>
+                <a href="#contact" class="text-white hover:text-gray-400 mx-2">Contact</a>
+            </div>
+            <!-- Footer Icons -->
+            <div class="footer-icons flex justify-center space-x-6">
+                <a href="https://www.facebook.com/your-profile" target="_blank" class="inline-block mx-2 facebook" aria-label="Facebook">
+                    <i class="fab fa-facebook-f text-white text-2xl"></i>
+                </a>
+                <a href="https://www.twitter.com/your-profile" target="_blank" class="inline-block mx-2 twitter" aria-label="Twitter">
+                    <i class="fab fa-twitter text-white text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="inline-block mx-2 linkedin" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in text-white text-2xl"></i>
+                </a>
+                <a href="https://www.instagram.com/your-profile" target="_blank" class="inline-block mx-2 email" aria-label="Instagram">
+                    <i class="fab fa-instagram text-white text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

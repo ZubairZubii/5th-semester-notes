@@ -1,0 +1,3 @@
+LIVE URL : https://zubairzubii.github.io/weather-api/table.html
+
+PROJECT GITHUB URL : https://github.com/ZubairZubii/weather-api
